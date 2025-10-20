@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "upd-test",
+  "version": "0.1.0",
+  "identifier": "com.upd.test",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "upd-test",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDRBRTJEMzA1RkI3MjZEMzMKUldRemJYTDdCZFBpU3BqSGx2NmJnTnk0elg3TzFYeGpZQjZYMFBDNmVyYTI4eXY0SW1UYkNZdXMK",
+      "endpoints": [
+        "https://raw.githubusercontent.com/us3rn1me/upd-test/refs/heads/main/latest.json"
+      ]
+    }
+  }
+}
